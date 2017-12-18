@@ -7,6 +7,7 @@ import java.util.regex.Pattern;
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.NameValuePair;
 import org.apache.commons.httpclient.methods.PostMethod;
+import org.apache.commons.lang.StringUtils;
 import org.apache.commons.httpclient.methods.GetMethod;
 import org.apache.commons.httpclient.methods.DeleteMethod;
 
@@ -56,7 +57,7 @@ class Client {
 				break;
 			default:
 				LOG.warning("Invalid response code ($post.getStatusCode()) from CAS server!");
-				LOG.info("Response: $response");
+				LOG.info("Response:" + response);
 				break;
 			}
 		} catch (final IOException e) {
@@ -82,11 +83,11 @@ class Client {
 			System.out.println(response);
 			switch (method.getStatusCode()) {
 			case 200:
-				LOG.info("Response: $response");
+				LOG.info("Response:" + response);
 				break;
 			default:
 				LOG.warning("Invalid response code (" + method.getStatusCode() + ") from CAS server!");
-				LOG.info("Response: $response");
+				LOG.info("Response:" + response);
 				break;
 			}
 		} catch (final IOException e) {
@@ -109,7 +110,7 @@ class Client {
 				break;
 			default:
 				LOG.warning("Invalid response code (" + method.getStatusCode() + ") from CAS server!");
-				LOG.info("Response: $response");
+				LOG.info("Response:" + response);
 				break;
 			}
 		} catch (final IOException e) {
@@ -120,20 +121,28 @@ class Client {
 	}
 
 	public static void main(String[] args) {
-		String server = "http://192.168.5.154:8080/cas/v1/tickets";
-		String username = "1";
-		String password = "1";
-		//String service = "http://192.168.5.154:8080/cas-client/cas/test";
-		String service = "http://192.168.5.154:8080/cas-client-b/cas/test";
+		String server = "http://localhost:6688/cas/v1/tickets";
+		String username = "root";
+		String password = "root";
+		// String service = "http://192.168.5.154:8080/cas-client/cas/test";
+		String service = "http://localhost:8080/cas-client-b/cas/test";
 		Client client = new Client();
 		String ticketGrantingTicket = client.getTicketGrantingTicket(server, username, password);
-		//String ticketGrantingTicket="TGT-14-6OcMogvsO49id9zdqSVokad7cq2Z4Evd6grew32XVAUGzRLwov-cas01.example.org";
+		// String
+		// ticketGrantingTicket="TGT-14-6OcMogvsO49id9zdqSVokad7cq2Z4Evd6grew32XVAUGzRLwov-cas01.example.org";
 		System.out.println(ticketGrantingTicket);
 		// println("TicketGrantingTicket is $ticketGrantingTicket");
-		String serviceTicket = client.getServiceTicket(server, ticketGrantingTicket, service);
-		System.out.println("serviceTicket"+serviceTicket);
+		String serviceTicket = "";
+		if (StringUtils.isNotBlank(ticketGrantingTicket)) {
+			serviceTicket = client.getServiceTicket(server, ticketGrantingTicket, service);
+		}
+		System.out.println("serviceTicket" + serviceTicket);
+		if (StringUtils.isNotBlank(ticketGrantingTicket)) {
+			client.getServiceCall(service, serviceTicket);
+		}
+		
 		// println("ServiceTicket is $serviceTicket");
-		client.getServiceCall(service, serviceTicket);
-		//client.logout(server, ticketGrantingTicket);
+		
+		// client.logout(server, ticketGrantingTicket);
 	}
 }
