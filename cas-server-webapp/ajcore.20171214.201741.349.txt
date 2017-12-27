@@ -1,0 +1,428 @@
+---- AspectJ Properties ---
+AspectJ Compiler 1.6.10 built on Friday Oct 22, 2010 at 03:50:26 GMT
+---- Dump Properties ---
+Dump file: ajcore.20171214.201741.349.txt
+Dump reason: org.aspectj.apache.bcel.classfile.ClassFormatException
+Dump on exception: true
+Dump at exit condition: abort
+---- Exception Information ---
+org.aspectj.apache.bcel.classfile.ClassFormatException: File: 'java/lang/reflect/AnnotatedElement.class': Invalid byte tag in constant pool: 15
+	at org.aspectj.apache.bcel.classfile.ClassParser.readConstantPool(ClassParser.java:192)
+	at org.aspectj.apache.bcel.classfile.ClassParser.parse(ClassParser.java:131)
+	at org.aspectj.weaver.bcel.BcelWorld.lookupJavaClass(BcelWorld.java:424)
+	at org.aspectj.weaver.bcel.BcelWorld.resolveDelegate(BcelWorld.java:376)
+	at org.aspectj.weaver.World.resolveToReferenceType(World.java:461)
+	at org.aspectj.weaver.World.resolve(World.java:305)
+	at org.aspectj.weaver.World.resolve(World.java:218)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:97)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:41)
+	at org.aspectj.weaver.bcel.BcelObjectType.ensureGenericSignatureUnpacked(BcelObjectType.java:807)
+	at org.aspectj.weaver.bcel.BcelObjectType.getDeclaredInterfaces(BcelObjectType.java:255)
+	at org.aspectj.weaver.ReferenceType.getDeclaredInterfaces(ReferenceType.java:624)
+	at org.aspectj.weaver.ResolvedType.getDirectSupertypes(ResolvedType.java:76)
+	at org.aspectj.weaver.ResolvedType.collectInterTypeMungers(ResolvedType.java:1390)
+	at org.aspectj.weaver.ResolvedType.getInterTypeMungersIncludingSupers(ResolvedType.java:1371)
+	at org.aspectj.weaver.ResolvedType.checkInterTypeMungers(ResolvedType.java:1442)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:809)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:652)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.createBinaryTypeFrom(AjLookupEnvironment.java:1398)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.createBinaryTypeFrom(LookupEnvironment.java:599)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.accept(Compiler.java:276)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.askForType(LookupEnvironment.java:113)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.UnresolvedReferenceBinding.resolve(UnresolvedReferenceBinding.java:49)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.resolveType(BinaryTypeBinding.java:99)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.ParameterizedTypeBinding.resolve(ParameterizedTypeBinding.java:858)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.resolveType(BinaryTypeBinding.java:113)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.resolveTypesFor(BinaryTypeBinding.java:974)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.getExactMethod(BinaryTypeBinding.java:778)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.getExactMethod(BinaryTypeBinding.java:797)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.getExactMethod(BinaryTypeBinding.java:797)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.SourceTypeBinding.getExactMethodBase(SourceTypeBinding.java:899)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.SourceTypeBinding.getExactMethod(SourceTypeBinding.java:815)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.Scope.findExactMethod(Scope.java:787)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.Scope.getImplicitMethod(Scope.java:1865)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.ast.MessageSend.resolveMethodBinding(MessageSend.java:612)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.ast.MessageSend.resolveType(MessageSend.java:465)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.ast.MessageSend.resolveType(MessageSend.java:422)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.ast.FieldDeclaration.resolve(FieldDeclaration.java:213)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.ast.TypeDeclaration.resolve(TypeDeclaration.java:1071)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.ast.TypeDeclaration.resolve(TypeDeclaration.java:1188)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.ast.CompilationUnitDeclaration.resolve(CompilationUnitDeclaration.java:366)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.process(Compiler.java:636)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:392)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:1021)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:268)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:181)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:371)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:248)
+	at org.codehaus.mojo.aspectj.AbstractAjcCompiler.execute(AbstractAjcCompiler.java:370)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:134)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:208)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:116)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:80)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:307)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:193)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:106)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:862)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:286)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:197)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+---- System Properties ---
+java.runtime.name=Java(TM) SE Runtime Environment
+sun.boot.library.path=C:\Java\jdk1.8.0_25\jre\bin
+java.vm.version=25.25-b02
+maven.multiModuleProjectDirectory=D:\liangzhenghui\cas\cas3study\cas-server-webapp
+java.vm.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+guice.disable.misplaced.annotation.check=true
+path.separator=;
+java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+file.encoding.pkg=sun.io
+user.country=CN
+user.script=
+sun.java.launcher=SUN_STANDARD
+sun.os.patch.level=Service Pack 1
+java.vm.specification.name=Java Virtual Machine Specification
+user.dir=D:\liangzhenghui\cas\cas3study\cas-server-webapp
+java.runtime.version=1.8.0_25-b18
+java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+java.endorsed.dirs=C:\Java\jdk1.8.0_25\jre\lib\endorsed
+os.arch=amd64
+java.io.tmpdir=C:\Users\LIANGZ~1\AppData\Local\Temp\
+line.separator=
+
+java.vm.specification.vendor=Oracle Corporation
+user.variant=
+os.name=Windows 7
+classworlds.conf=D:\maven\apache-maven-3.3.3-bin\apache-maven-3.3.3\bin\..\bin\m2.conf
+sun.jnu.encoding=GBK
+java.library.path=C:\Java\jdk1.8.0_25\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;c:\program files\graphicsmagick-1.3.25-q8;C:\Program Files\ImageMagick-7.0.5-Q8;C:\Java\jdk1.8.0_25\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;D:\instantclient_11_2;D:\tools\android\android-sdk-windows\android-sdk-windows\tools;D:\apache-ant-1.9.4-bin\apache-ant-1.9.4\bin;C:\Ruby193\bin;D:\maven\apache-maven-3.3.3-bin\apache-maven-3.3.3\bin;C:\Python27;C:\Users\liangzhenghui\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\TortoiseSVN\bin;D:\tools\android\android-sdk-windows\android-sdk-windows\platform-tools;C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\Program Files\nodejs\;C:\Program Files\SlikSvn\bin;D:\liangzhenghui\gradle-4.3-bin\gradle-4.3\bin;C:\Program Files (x86)\Git\bin;C:\Ruby23\bin;F:\cocos2djs\cocos2d-js-develop\tools\cocos2d-console\bin;C:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;C:\Users\liangzhenghui\AppData\Roaming\npm;.
+java.specification.name=Java Platform API Specification
+java.class.version=52.0
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+os.version=6.1
+user.home=C:\Users\liangzhenghui
+user.timezone=Asia/Shanghai
+java.awt.printerjob=sun.awt.windows.WPrinterJob
+file.encoding=GBK
+java.specification.version=1.8
+java.class.path=D:\maven\apache-maven-3.3.3-bin\apache-maven-3.3.3\bin\..\boot\plexus-classworlds-2.5.2.jar
+user.name=liangzhenghui
+java.vm.specification.version=1.8
+sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher clean install
+java.home=C:\Java\jdk1.8.0_25\jre
+sun.arch.data.model=64
+user.language=zh
+java.specification.vendor=Oracle Corporation
+awt.toolkit=sun.awt.windows.WToolkit
+java.vm.info=mixed mode
+java.version=1.8.0_25
+java.ext.dirs=C:\Java\jdk1.8.0_25\jre\lib\ext;C:\Windows\Sun\Java\lib\ext
+sun.boot.class.path=C:\Java\jdk1.8.0_25\jre\lib\resources.jar;C:\Java\jdk1.8.0_25\jre\lib\rt.jar;C:\Java\jdk1.8.0_25\jre\lib\sunrsasign.jar;C:\Java\jdk1.8.0_25\jre\lib\jsse.jar;C:\Java\jdk1.8.0_25\jre\lib\jce.jar;C:\Java\jdk1.8.0_25\jre\lib\charsets.jar;C:\Java\jdk1.8.0_25\jre\lib\jfr.jar;C:\Java\jdk1.8.0_25\jre\classes
+java.vendor=Oracle Corporation
+sun.stderr.encoding=ms936
+maven.home=D:\maven\apache-maven-3.3.3-bin\apache-maven-3.3.3\bin\..
+file.separator=\
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+sun.io.unicode.encoding=UnicodeLittle
+sun.cpu.endian=little
+sun.stdout.encoding=ms936
+sun.desktop=windows
+sun.cpu.isalist=amd64
+---- Command Line ---
+-encoding
+UTF-8
+-source
+1.6
+-target
+1.6
+-classpath
+F:\repository1\org\mockito\mockito-all\1.9.0\mockito-all-1.9.0.jar;F:\repository1\com\github\inspektr\inspektr-support-spring\1.0.7.GA\inspektr-support-spring-1.0.7.GA.jar;F:\repository1\org\springframework\security\spring-security-core\3.1.0.RELEASE\spring-security-core-3.1.0.RELEASE.jar;F:\repository1\org\springframework\security\spring-security-web\3.1.0.RELEASE\spring-security-web-3.1.0.RELEASE.jar;F:\repository1\org\springframework\security\spring-security-cas\3.1.0.RELEASE\spring-security-cas-3.1.0.RELEASE.jar;F:\repository1\org\springframework\security\spring-security-config\3.1.0.RELEASE\spring-security-config-3.1.0.RELEASE.jar;F:\repository1\org\springframework\spring-aop\3.1.1.RELEASE\spring-aop-3.1.1.RELEASE.jar;F:\repository1\org\jasig\cas\cas-server-core\3.5.4-SNAPSHOT\cas-server-core-3.5.4-SNAPSHOT.jar;F:\repository1\org\jasig\cas\cas-server-integration-restlet\3.5.4-SNAPSHOT\cas-server-integration-restlet-3.5.4-SNAPSHOT.jar;F:\repository1\org\jasig\cas\cas-server-support-jdbc\3.5.4-SNAPSHOT\cas-server-support-jdbc-3.5.4-SNAPSHOT.jar;F:\repository1\commons-dbcp\commons-dbcp\1.2.1\commons-dbcp-1.2.1.jar;F:\repository1\mysql\mysql-connector-java\5.1.45\mysql-connector-java-5.1.45.jar;F:\repository1\org\jasig\cas\client\cas-client-core\3.2.1\cas-client-core-3.2.1.jar;F:\repository1\org\springframework\spring-context-support\3.1.1.RELEASE\spring-context-support-3.1.1.RELEASE.jar;F:\repository1\org\springframework\spring-expression\3.1.1.RELEASE\spring-expression-3.1.1.RELEASE.jar;F:\repository1\org\opensymphony\quartz\quartz\1.6.1\quartz-1.6.1.jar;F:\repository1\net\sf\spring-json\spring-json\1.3.1\spring-json-1.3.1.jar;F:\repository1\cglib\cglib-nodep\2.2.2\cglib-nodep-2.2.2.jar;F:\repository1\net\sf\sojo\sojo\1.0.5\sojo-1.0.5.jar;F:\repository1\javax\servlet\jstl\1.1.2\jstl-1.1.2.jar;F:\repository1\taglibs\standard\1.1.2\standard-1.1.2.jar;F:\repository1\ognl\ognl\2.7.3\ognl-2.7.3.jar;F:\repository1\org\hibernate\hibernate-validator\4.2.0.Final\hibernate-validator-4.2.0.Final.jar;F:\repository1\junit\junit\4.10\junit-4.10.jar;F:\repository1\org\mockito\mockito-core\1.9.0\mockito-core-1.9.0.jar;F:\repository1\org\springframework\spring-test\3.1.1.RELEASE\spring-test-3.1.1.RELEASE.jar;F:\repository1\javax\servlet\servlet-api\2.5\servlet-api-2.5.jar;F:\repository1\org\aspectj\aspectjrt\1.6.10\aspectjrt-1.6.10.jar;F:\repository1\org\aspectj\aspectjweaver\1.6.10\aspectjweaver-1.6.10.jar;F:\repository1\javax\validation\validation-api\1.0.0.GA\validation-api-1.0.0.GA.jar;F:\repository1\org\slf4j\slf4j-api\1.7.1\slf4j-api-1.7.1.jar;F:\repository1\org\slf4j\slf4j-log4j12\1.7.1\slf4j-log4j12-1.7.1.jar;F:\repository1\org\slf4j\jcl-over-slf4j\1.7.1\jcl-over-slf4j-1.7.1.jar;F:\repository1\com\github\inspektr\inspektr-audit\1.0.7.GA\inspektr-audit-1.0.7.GA.jar;F:\repository1\com\github\inspektr\inspektr-common\1.0.7.GA\inspektr-common-1.0.7.GA.jar;F:\repository1\org\springframework\spring-web\3.1.1.RELEASE\spring-web-3.1.1.RELEASE.jar;F:\repository1\org\springframework\spring-webmvc\3.1.1.RELEASE\spring-webmvc-3.1.1.RELEASE.jar;F:\repository1\org\springframework\spring-tx\3.1.1.RELEASE\spring-tx-3.1.1.RELEASE.jar;F:\repository1\org\springframework\spring-jdbc\3.1.1.RELEASE\spring-jdbc-3.1.1.RELEASE.jar;F:\repository1\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;F:\repository1\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar;F:\repository1\org\springframework\spring-beans\3.1.1.RELEASE\spring-beans-3.1.1.RELEASE.jar;F:\repository1\org\springframework\spring-core\3.1.1.RELEASE\spring-core-3.1.1.RELEASE.jar;F:\repository1\org\springframework\security\spring-security-crypto\3.1.0.RELEASE\spring-security-crypto-3.1.0.RELEASE.jar;F:\repository1\org\springframework\spring-asm\3.1.1.RELEASE\spring-asm-3.1.1.RELEASE.jar;F:\repository1\log4j\log4j\1.2.15\log4j-1.2.15.jar;F:\repository1\org\jasig\service\persondir\person-directory-impl\1.5.1\person-directory-impl-1.5.1.jar;F:\repository1\com\sun\xml\bind\jaxb-impl\2.2\jaxb-impl-2.2.jar;F:\repository1\javax\xml\bind\jaxb-api\2.2\jaxb-api-2.2.jar;F:\repository1\javax\xml\stream\stax-api\1.0-2\stax-api-1.0-2.jar;F:\repository1\javax\activation\activation\1.1\activation-1.1.jar;F:\repository1\org\jasig\service\persondir\person-directory-api\1.5.1\person-directory-api-1.5.1.jar;F:\repository1\commons-codec\commons-codec\1.4\commons-codec-1.4.jar;F:\repository1\jdom\jdom\1.0\jdom-1.0.jar;F:\repository1\org\springframework\spring-orm\3.1.1.RELEASE\spring-orm-3.1.1.RELEASE.jar;F:\repository1\org\hibernate\hibernate-core\4.1.0.Final\hibernate-core-4.1.0.Final.jar;F:\repository1\antlr\antlr\2.7.7\antlr-2.7.7.jar;F:\repository1\org\jboss\spec\javax\transaction\jboss-transaction-api_1.1_spec\1.0.0.Final\jboss-transaction-api_1.1_spec-1.0.0.Final.jar;F:\repository1\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;F:\repository1\org\hibernate\javax\persistence\hibernate-jpa-2.0-api\1.0.1.Final\hibernate-jpa-2.0-api-1.0.1.Final.jar;F:\repository1\org\jboss\logging\jboss-logging\3.1.0.CR2\jboss-logging-3.1.0.CR2.jar;F:\repository1\org\javassist\javassist\3.15.0-GA\javassist-3.15.0-GA.jar;F:\repository1\org\hibernate\common\hibernate-commons-annotations\4.0.1.Final\hibernate-commons-annotations-4.0.1.Final.jar;F:\repository1\org\apache\santuario\xmlsec\1.4.3\xmlsec-1.4.3.jar;F:\repository1\org\opensaml\opensaml\2.5.1-1\opensaml-2.5.1-1.jar;F:\repository1\org\opensaml\openws\1.4.2-1\openws-1.4.2-1.jar;F:\repository1\org\opensaml\xmltooling\1.3.2-1\xmltooling-1.3.2-1.jar;F:\repository1\org\slf4j\jul-to-slf4j\1.6.1\jul-to-slf4j-1.6.1.jar;F:\repository1\org\bouncycastle\bcprov-jdk15\1.45\bcprov-jdk15-1.45.jar;F:\repository1\ca\juliusdavies\not-yet-commons-ssl\0.3.9\not-yet-commons-ssl-0.3.9.jar;F:\repository1\net\jcip\jcip-annotations\1.0\jcip-annotations-1.0.jar;F:\repository1\commons-httpclient\commons-httpclient\3.1\commons-httpclient-3.1.jar;F:\repository1\velocity\velocity\1.5\velocity-1.5.jar;F:\repository1\org\owasp\esapi\esapi\2.0GA\esapi-2.0GA.jar;F:\repository1\javax\xml\xmldsig\1.0\xmldsig-1.0.jar;F:\repository1\org\perf4j\perf4j\0.9.14\perf4j-0.9.14-log4jonly.jar;F:\repository1\org\springframework\webflow\spring-webflow\2.3.0.RELEASE\spring-webflow-2.3.0.RELEASE.jar;F:\repository1\org\springframework\webflow\spring-binding\2.3.0.RELEASE\spring-binding-2.3.0.RELEASE.jar;F:\repository1\org\springframework\webflow\spring-js\2.3.0.RELEASE\spring-js-2.3.0.RELEASE.jar;F:\repository1\org\springframework\webflow\spring-js-resources\2.3.0.RELEASE\spring-js-resources-2.3.0.RELEASE.jar;F:\repository1\commons-io\commons-io\2.0\commons-io-2.0.jar;F:\repository1\joda-time\joda-time\2.1\joda-time-2.1.jar;F:\repository1\org\restlet\org.restlet\1.1.1\org.restlet-1.1.1.jar;F:\repository1\commons-collections\commons-collections\2.1\commons-collections-2.1.jar;F:\repository1\xml-apis\xml-apis\1.0.b2\xml-apis-1.0.b2.jar;F:\repository1\commons-logging\commons-logging\1.1\commons-logging-1.1.jar;F:\repository1\commons-lang\commons-lang\2.5\commons-lang-2.5.jar;D:\liangzhenghui\cas\cas3study\cas-server-webapp\target\classes
+-d
+D:\liangzhenghui\cas\cas3study\cas-server-webapp\target\classes
+D:\liangzhenghui\cas\cas3study\cas-server-webapp\src\main\java\org\jasig\cas\util\AutowiringSchedulerFactoryBean.java
+D:\liangzhenghui\cas\cas3study\cas-server-webapp\src\main\java\org\jasig\cas\web\flow\GatewayServicesManagementCheck.java
+D:\liangzhenghui\cas\cas3study\cas-server-webapp\src\main\java\org\jasig\cas\web\flow\ServiceAuthorizationCheck.java
+D:\liangzhenghui\cas\cas3study\cas-server-webapp\src\main\java\org\jasig\cas\web\FlowExecutionExceptionResolver.java
+---- Full Classpath ---
+C:\Java\jdk1.8.0_25\jre\lib\resources.jar(3487757 bytes)
+C:\Java\jdk1.8.0_25\jre\lib\rt.jar(62801012 bytes)
+C:\Java\jdk1.8.0_25\jre\lib\sunrsasign.jar(missing)
+C:\Java\jdk1.8.0_25\jre\lib\jsse.jar(615814 bytes)
+C:\Java\jdk1.8.0_25\jre\lib\jce.jar(113593 bytes)
+C:\Java\jdk1.8.0_25\jre\lib\charsets.jar(3086224 bytes)
+C:\Java\jdk1.8.0_25\jre\lib\jfr.jar(559892 bytes)
+C:\Java\jdk1.8.0_25\jre\classes(missing)
+C:\Java\jdk1.8.0_25\jre\lib\ext\access-bridge-64.jar(187471 bytes)
+C:\Java\jdk1.8.0_25\jre\lib\ext\cldrdata.jar(3860522 bytes)
+C:\Java\jdk1.8.0_25\jre\lib\ext\dnsns.jar(8286 bytes)
+C:\Java\jdk1.8.0_25\jre\lib\ext\jaccess.jar(44115 bytes)
+C:\Java\jdk1.8.0_25\jre\lib\ext\jfxrt.jar(17070998 bytes)
+C:\Java\jdk1.8.0_25\jre\lib\ext\localedata.jar(2248113 bytes)
+C:\Java\jdk1.8.0_25\jre\lib\ext\nashorn.jar(1618833 bytes)
+C:\Java\jdk1.8.0_25\jre\lib\ext\sunec.jar(39773 bytes)
+C:\Java\jdk1.8.0_25\jre\lib\ext\sunjce_provider.jar(278033 bytes)
+C:\Java\jdk1.8.0_25\jre\lib\ext\sunmscapi.jar(32654 bytes)
+C:\Java\jdk1.8.0_25\jre\lib\ext\sunpkcs11.jar(249280 bytes)
+C:\Java\jdk1.8.0_25\jre\lib\ext\zipfs.jar(68837 bytes)
+F:\repository1\org\mockito\mockito-all\1.9.0\mockito-all-1.9.0.jar(1495219 bytes)
+F:\repository1\com\github\inspektr\inspektr-support-spring\1.0.7.GA\inspektr-support-spring-1.0.7.GA.jar(14012 bytes)
+F:\repository1\org\springframework\security\spring-security-core\3.1.0.RELEASE\spring-security-core-3.1.0.RELEASE.jar(348567 bytes)
+F:\repository1\org\springframework\security\spring-security-web\3.1.0.RELEASE\spring-security-web-3.1.0.RELEASE.jar(255577 bytes)
+F:\repository1\org\springframework\security\spring-security-cas\3.1.0.RELEASE\spring-security-cas-3.1.0.RELEASE.jar(25481 bytes)
+F:\repository1\org\springframework\security\spring-security-config\3.1.0.RELEASE\spring-security-config-3.1.0.RELEASE.jar(202754 bytes)
+F:\repository1\org\springframework\spring-aop\3.1.1.RELEASE\spring-aop-3.1.1.RELEASE.jar(331471 bytes)
+F:\repository1\org\jasig\cas\cas-server-core\3.5.4-SNAPSHOT\cas-server-core-3.5.4-SNAPSHOT.jar(263516 bytes)
+F:\repository1\org\jasig\cas\cas-server-integration-restlet\3.5.4-SNAPSHOT\cas-server-integration-restlet-3.5.4-SNAPSHOT.jar(10959 bytes)
+F:\repository1\org\jasig\cas\cas-server-support-jdbc\3.5.4-SNAPSHOT\cas-server-support-jdbc-3.5.4-SNAPSHOT.jar(8578 bytes)
+F:\repository1\commons-dbcp\commons-dbcp\1.2.1\commons-dbcp-1.2.1.jar(107631 bytes)
+F:\repository1\mysql\mysql-connector-java\5.1.45\mysql-connector-java-5.1.45.jar(999808 bytes)
+F:\repository1\org\jasig\cas\client\cas-client-core\3.2.1\cas-client-core-3.2.1.jar(87312 bytes)
+F:\repository1\org\springframework\spring-context-support\3.1.1.RELEASE\spring-context-support-3.1.1.RELEASE.jar(107225 bytes)
+F:\repository1\org\springframework\spring-expression\3.1.1.RELEASE\spring-expression-3.1.1.RELEASE.jar(176311 bytes)
+F:\repository1\org\opensymphony\quartz\quartz\1.6.1\quartz-1.6.1.jar(445090 bytes)
+F:\repository1\net\sf\spring-json\spring-json\1.3.1\spring-json-1.3.1.jar(69615 bytes)
+F:\repository1\cglib\cglib-nodep\2.2.2\cglib-nodep-2.2.2.jar(326917 bytes)
+F:\repository1\net\sf\sojo\sojo\1.0.5\sojo-1.0.5.jar(178457 bytes)
+F:\repository1\javax\servlet\jstl\1.1.2\jstl-1.1.2.jar(20682 bytes)
+F:\repository1\taglibs\standard\1.1.2\standard-1.1.2.jar(393259 bytes)
+F:\repository1\ognl\ognl\2.7.3\ognl-2.7.3.jar(239803 bytes)
+F:\repository1\org\hibernate\hibernate-validator\4.2.0.Final\hibernate-validator-4.2.0.Final.jar(366592 bytes)
+F:\repository1\junit\junit\4.10\junit-4.10.jar(253160 bytes)
+F:\repository1\org\mockito\mockito-core\1.9.0\mockito-core-1.9.0.jar(1414161 bytes)
+F:\repository1\org\springframework\spring-test\3.1.1.RELEASE\spring-test-3.1.1.RELEASE.jar(229725 bytes)
+F:\repository1\javax\servlet\servlet-api\2.5\servlet-api-2.5.jar(105112 bytes)
+F:\repository1\org\aspectj\aspectjrt\1.6.10\aspectjrt-1.6.10.jar(116226 bytes)
+F:\repository1\org\aspectj\aspectjweaver\1.6.10\aspectjweaver-1.6.10.jar(1675810 bytes)
+F:\repository1\javax\validation\validation-api\1.0.0.GA\validation-api-1.0.0.GA.jar(47433 bytes)
+F:\repository1\org\slf4j\slf4j-api\1.7.1\slf4j-api-1.7.1.jar(26065 bytes)
+F:\repository1\org\slf4j\slf4j-log4j12\1.7.1\slf4j-log4j12-1.7.1.jar(8820 bytes)
+F:\repository1\org\slf4j\jcl-over-slf4j\1.7.1\jcl-over-slf4j-1.7.1.jar(16458 bytes)
+F:\repository1\com\github\inspektr\inspektr-audit\1.0.7.GA\inspektr-audit-1.0.7.GA.jar(19261 bytes)
+F:\repository1\com\github\inspektr\inspektr-common\1.0.7.GA\inspektr-common-1.0.7.GA.jar(7097 bytes)
+F:\repository1\org\springframework\spring-web\3.1.1.RELEASE\spring-web-3.1.1.RELEASE.jar(544291 bytes)
+F:\repository1\org\springframework\spring-webmvc\3.1.1.RELEASE\spring-webmvc-3.1.1.RELEASE.jar(573701 bytes)
+F:\repository1\org\springframework\spring-tx\3.1.1.RELEASE\spring-tx-3.1.1.RELEASE.jar(246719 bytes)
+F:\repository1\org\springframework\spring-jdbc\3.1.1.RELEASE\spring-jdbc-3.1.1.RELEASE.jar(404732 bytes)
+F:\repository1\aopalliance\aopalliance\1.0\aopalliance-1.0.jar(4467 bytes)
+F:\repository1\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar(831068 bytes)
+F:\repository1\org\springframework\spring-beans\3.1.1.RELEASE\spring-beans-3.1.1.RELEASE.jar(589824 bytes)
+F:\repository1\org\springframework\spring-core\3.1.1.RELEASE\spring-core-3.1.1.RELEASE.jar(449324 bytes)
+F:\repository1\org\springframework\security\spring-security-crypto\3.1.0.RELEASE\spring-security-crypto-3.1.0.RELEASE.jar(41068 bytes)
+F:\repository1\org\springframework\spring-asm\3.1.1.RELEASE\spring-asm-3.1.1.RELEASE.jar(53081 bytes)
+F:\repository1\log4j\log4j\1.2.15\log4j-1.2.15.jar(391834 bytes)
+F:\repository1\org\jasig\service\persondir\person-directory-impl\1.5.1\person-directory-impl-1.5.1.jar(122233 bytes)
+F:\repository1\com\sun\xml\bind\jaxb-impl\2.2\jaxb-impl-2.2.jar(872831 bytes)
+F:\repository1\javax\xml\bind\jaxb-api\2.2\jaxb-api-2.2.jar(104172 bytes)
+F:\repository1\javax\xml\stream\stax-api\1.0-2\stax-api-1.0-2.jar(23346 bytes)
+F:\repository1\javax\activation\activation\1.1\activation-1.1.jar(62983 bytes)
+F:\repository1\org\jasig\service\persondir\person-directory-api\1.5.1\person-directory-api-1.5.1.jar(8124 bytes)
+F:\repository1\commons-codec\commons-codec\1.4\commons-codec-1.4.jar(58160 bytes)
+F:\repository1\jdom\jdom\1.0\jdom-1.0.jar(153253 bytes)
+F:\repository1\org\springframework\spring-orm\3.1.1.RELEASE\spring-orm-3.1.1.RELEASE.jar(378476 bytes)
+F:\repository1\org\hibernate\hibernate-core\4.1.0.Final\hibernate-core-4.1.0.Final.jar(4317092 bytes)
+F:\repository1\antlr\antlr\2.7.7\antlr-2.7.7.jar(445288 bytes)
+F:\repository1\org\jboss\spec\javax\transaction\jboss-transaction-api_1.1_spec\1.0.0.Final\jboss-transaction-api_1.1_spec-1.0.0.Final.jar(11209 bytes)
+F:\repository1\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar(313898 bytes)
+F:\repository1\org\hibernate\javax\persistence\hibernate-jpa-2.0-api\1.0.1.Final\hibernate-jpa-2.0-api-1.0.1.Final.jar(102661 bytes)
+F:\repository1\org\jboss\logging\jboss-logging\3.1.0.CR2\jboss-logging-3.1.0.CR2.jar(60539 bytes)
+F:\repository1\org\javassist\javassist\3.15.0-GA\javassist-3.15.0-GA.jar(648253 bytes)
+F:\repository1\org\hibernate\common\hibernate-commons-annotations\4.0.1.Final\hibernate-commons-annotations-4.0.1.Final.jar(81271 bytes)
+F:\repository1\org\apache\santuario\xmlsec\1.4.3\xmlsec-1.4.3.jar(447633 bytes)
+F:\repository1\org\opensaml\opensaml\2.5.1-1\opensaml-2.5.1-1.jar(1352924 bytes)
+F:\repository1\org\opensaml\openws\1.4.2-1\openws-1.4.2-1.jar(565330 bytes)
+F:\repository1\org\opensaml\xmltooling\1.3.2-1\xmltooling-1.3.2-1.jar(610865 bytes)
+F:\repository1\org\slf4j\jul-to-slf4j\1.6.1\jul-to-slf4j-1.6.1.jar(4463 bytes)
+F:\repository1\org\bouncycastle\bcprov-jdk15\1.45\bcprov-jdk15-1.45.jar(1663318 bytes)
+F:\repository1\ca\juliusdavies\not-yet-commons-ssl\0.3.9\not-yet-commons-ssl-0.3.9.jar(258278 bytes)
+F:\repository1\net\jcip\jcip-annotations\1.0\jcip-annotations-1.0.jar(2254 bytes)
+F:\repository1\commons-httpclient\commons-httpclient\3.1\commons-httpclient-3.1.jar(305001 bytes)
+F:\repository1\velocity\velocity\1.5\velocity-1.5.jar(392124 bytes)
+F:\repository1\org\owasp\esapi\esapi\2.0GA\esapi-2.0GA.jar(367204 bytes)
+F:\repository1\javax\xml\xmldsig\1.0\xmldsig-1.0.jar(159930 bytes)
+F:\repository1\org\perf4j\perf4j\0.9.14\perf4j-0.9.14-log4jonly.jar(96749 bytes)
+F:\repository1\org\springframework\webflow\spring-webflow\2.3.0.RELEASE\spring-webflow-2.3.0.RELEASE.jar(529299 bytes)
+F:\repository1\org\springframework\webflow\spring-binding\2.3.0.RELEASE\spring-binding-2.3.0.RELEASE.jar(151041 bytes)
+F:\repository1\org\springframework\webflow\spring-js\2.3.0.RELEASE\spring-js-2.3.0.RELEASE.jar(17670 bytes)
+F:\repository1\org\springframework\webflow\spring-js-resources\2.3.0.RELEASE\spring-js-resources-2.3.0.RELEASE.jar(4458069 bytes)
+F:\repository1\commons-io\commons-io\2.0\commons-io-2.0.jar(159235 bytes)
+F:\repository1\joda-time\joda-time\2.1\joda-time-2.1.jar(570478 bytes)
+F:\repository1\org\restlet\org.restlet\1.1.1\org.restlet-1.1.1.jar(247716 bytes)
+F:\repository1\commons-collections\commons-collections\2.1\commons-collections-2.1.jar(165119 bytes)
+F:\repository1\xml-apis\xml-apis\1.0.b2\xml-apis-1.0.b2.jar(109318 bytes)
+F:\repository1\commons-logging\commons-logging\1.1\commons-logging-1.1.jar(52915 bytes)
+F:\repository1\commons-lang\commons-lang\2.5\commons-lang-2.5.jar(279193 bytes)
+D:\liangzhenghui\cas\cas3study\cas-server-webapp\target\classes(3 entries)
+---- Compiler Messages ---
+info directory classpath entry does not exist: C:\Java\jdk1.8.0_25\jre\lib\sunrsasign.jar
+info zipfile classpath entry does not exist: C:\Java\jdk1.8.0_25\jre\classes
+info Pipelining compilation
+info compiling D:\liangzhenghui\cas\cas3study\cas-server-webapp\src\main\java\org\jasig\cas\util\AutowiringSchedulerFactoryBean.java
+info weaver operating in reweavable mode.  Need to verify any required types exist.
+error at (no source information available)
+D:\liangzhenghui\cas\cas3study\cas-server-webapp\src\main\java\org\jasig\cas\util\AutowiringSchedulerFactoryBean.java:0::0 Internal compiler error
+org.aspectj.apache.bcel.classfile.ClassFormatException: File: 'java/lang/reflect/AnnotatedElement.class': Invalid byte tag in constant pool: 15
+	at org.aspectj.apache.bcel.classfile.ClassParser.readConstantPool(ClassParser.java:192)
+	at org.aspectj.apache.bcel.classfile.ClassParser.parse(ClassParser.java:131)
+	at org.aspectj.weaver.bcel.BcelWorld.lookupJavaClass(BcelWorld.java:424)
+	at org.aspectj.weaver.bcel.BcelWorld.resolveDelegate(BcelWorld.java:376)
+	at org.aspectj.weaver.World.resolveToReferenceType(World.java:461)
+	at org.aspectj.weaver.World.resolve(World.java:305)
+	at org.aspectj.weaver.World.resolve(World.java:218)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:97)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:41)
+	at org.aspectj.weaver.bcel.BcelObjectType.ensureGenericSignatureUnpacked(BcelObjectType.java:807)
+	at org.aspectj.weaver.bcel.BcelObjectType.getDeclaredInterfaces(BcelObjectType.java:255)
+	at org.aspectj.weaver.ReferenceType.getDeclaredInterfaces(ReferenceType.java:624)
+	at org.aspectj.weaver.ResolvedType.getDirectSupertypes(ResolvedType.java:76)
+	at org.aspectj.weaver.ResolvedType.collectInterTypeMungers(ResolvedType.java:1390)
+	at org.aspectj.weaver.ResolvedType.getInterTypeMungersIncludingSupers(ResolvedType.java:1371)
+	at org.aspectj.weaver.ResolvedType.checkInterTypeMungers(ResolvedType.java:1442)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:809)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:652)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.createBinaryTypeFrom(AjLookupEnvironment.java:1398)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.createBinaryTypeFrom(LookupEnvironment.java:599)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.accept(Compiler.java:276)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.askForType(LookupEnvironment.java:113)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.UnresolvedReferenceBinding.resolve(UnresolvedReferenceBinding.java:49)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.resolveType(BinaryTypeBinding.java:99)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.ParameterizedTypeBinding.resolve(ParameterizedTypeBinding.java:858)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.resolveType(BinaryTypeBinding.java:113)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.resolveTypesFor(BinaryTypeBinding.java:974)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.getExactMethod(BinaryTypeBinding.java:778)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.getExactMethod(BinaryTypeBinding.java:797)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.getExactMethod(BinaryTypeBinding.java:797)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.SourceTypeBinding.getExactMethodBase(SourceTypeBinding.java:899)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.SourceTypeBinding.getExactMethod(SourceTypeBinding.java:815)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.Scope.findExactMethod(Scope.java:787)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.Scope.getImplicitMethod(Scope.java:1865)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.ast.MessageSend.resolveMethodBinding(MessageSend.java:612)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.ast.MessageSend.resolveType(MessageSend.java:465)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.ast.MessageSend.resolveType(MessageSend.java:422)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.ast.FieldDeclaration.resolve(FieldDeclaration.java:213)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.ast.TypeDeclaration.resolve(TypeDeclaration.java:1071)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.ast.TypeDeclaration.resolve(TypeDeclaration.java:1188)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.ast.CompilationUnitDeclaration.resolve(CompilationUnitDeclaration.java:366)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.process(Compiler.java:636)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:392)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:1021)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:268)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:181)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:371)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:248)
+	at org.codehaus.mojo.aspectj.AbstractAjcCompiler.execute(AbstractAjcCompiler.java:370)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:134)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:208)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:116)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:80)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:307)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:193)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:106)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:862)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:286)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:197)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+
+abort ABORT -- (ClassFormatException) File: 'java/lang/reflect/AnnotatedElement.class': Invalid byte tag in constant pool: 15
+File: 'java/lang/reflect/AnnotatedElement.class': Invalid byte tag in constant pool: 15
+org.aspectj.apache.bcel.classfile.ClassFormatException: File: 'java/lang/reflect/AnnotatedElement.class': Invalid byte tag in constant pool: 15
+	at org.aspectj.apache.bcel.classfile.ClassParser.readConstantPool(ClassParser.java:192)
+	at org.aspectj.apache.bcel.classfile.ClassParser.parse(ClassParser.java:131)
+	at org.aspectj.weaver.bcel.BcelWorld.lookupJavaClass(BcelWorld.java:424)
+	at org.aspectj.weaver.bcel.BcelWorld.resolveDelegate(BcelWorld.java:376)
+	at org.aspectj.weaver.World.resolveToReferenceType(World.java:461)
+	at org.aspectj.weaver.World.resolve(World.java:305)
+	at org.aspectj.weaver.World.resolve(World.java:218)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:97)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:41)
+	at org.aspectj.weaver.bcel.BcelObjectType.ensureGenericSignatureUnpacked(BcelObjectType.java:807)
+	at org.aspectj.weaver.bcel.BcelObjectType.getDeclaredInterfaces(BcelObjectType.java:255)
+	at org.aspectj.weaver.ReferenceType.getDeclaredInterfaces(ReferenceType.java:624)
+	at org.aspectj.weaver.ResolvedType.getDirectSupertypes(ResolvedType.java:76)
+	at org.aspectj.weaver.ResolvedType.collectInterTypeMungers(ResolvedType.java:1390)
+	at org.aspectj.weaver.ResolvedType.getInterTypeMungersIncludingSupers(ResolvedType.java:1371)
+	at org.aspectj.weaver.ResolvedType.checkInterTypeMungers(ResolvedType.java:1442)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:809)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:652)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.createBinaryTypeFrom(AjLookupEnvironment.java:1398)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.createBinaryTypeFrom(LookupEnvironment.java:599)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.accept(Compiler.java:276)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.askForType(LookupEnvironment.java:113)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.UnresolvedReferenceBinding.resolve(UnresolvedReferenceBinding.java:49)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.resolveType(BinaryTypeBinding.java:99)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.ParameterizedTypeBinding.resolve(ParameterizedTypeBinding.java:858)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.resolveType(BinaryTypeBinding.java:113)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.resolveTypesFor(BinaryTypeBinding.java:974)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.getExactMethod(BinaryTypeBinding.java:778)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.getExactMethod(BinaryTypeBinding.java:797)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.getExactMethod(BinaryTypeBinding.java:797)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.SourceTypeBinding.getExactMethodBase(SourceTypeBinding.java:899)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.SourceTypeBinding.getExactMethod(SourceTypeBinding.java:815)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.Scope.findExactMethod(Scope.java:787)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.Scope.getImplicitMethod(Scope.java:1865)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.ast.MessageSend.resolveMethodBinding(MessageSend.java:612)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.ast.MessageSend.resolveType(MessageSend.java:465)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.ast.MessageSend.resolveType(MessageSend.java:422)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.ast.FieldDeclaration.resolve(FieldDeclaration.java:213)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.ast.TypeDeclaration.resolve(TypeDeclaration.java:1071)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.ast.TypeDeclaration.resolve(TypeDeclaration.java:1188)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.ast.CompilationUnitDeclaration.resolve(CompilationUnitDeclaration.java:366)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.process(Compiler.java:636)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:392)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:1021)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:268)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:181)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:371)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:248)
+	at org.codehaus.mojo.aspectj.AbstractAjcCompiler.execute(AbstractAjcCompiler.java:370)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:134)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:208)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:116)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:80)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:307)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:193)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:106)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:862)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:286)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:197)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+
